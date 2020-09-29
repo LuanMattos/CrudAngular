@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DragoesDetalheComponent } from './dragoes-detalhe/dragoes-detalhe.component';
@@ -10,8 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSortModule} from '@angular/material/sort';
+import {registerLocaleData} from "@angular/common";
+import localeBr from "@angular/common/locales/pt";
 
-
+registerLocaleData(localeBr, 'pt')
 const appRoutes: Routes = [
   {
     path: 'listar',
@@ -49,7 +51,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

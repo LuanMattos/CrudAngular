@@ -18,14 +18,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let dragao of dragoes"   >
-          <td matSort matSortActive="name" matSortDirection="asc" (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
-          <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
-          <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt}}</td>
-          <td align="center">
-            <button type="button" class="btn-default-list" (click)="deleteDragao(dragao)">Deletar</button>
-          </td>
-        </tr>
+          <tr  *ngFor="let dragao of dragoes">
+            <td matSort matSortActive="name" matSortDirection="asc" (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
+            <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
+            <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt | date}}</td>
+            <td align="center">
+              <button type="button" class="btn-default-list" (click)="deleteDragao(dragao)">Deletar</button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

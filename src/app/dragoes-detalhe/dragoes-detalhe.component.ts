@@ -4,7 +4,6 @@ import { DragoesService } from '../services/Dragoes.service';
 import {Router} from "@angular/router";
 import {Sort} from "@angular/material/sort";
 
-
 @Component({
   selector: 'app-dragoes-detalhe',
   templateUrl: './dragoes-detalhe.component.html',
@@ -21,6 +20,9 @@ export class DragoesDetalheComponent implements OnInit {
 
   ngOnInit(): void {
   this.getDragoes();
+
+
+
   }
   getDragoes() {
     this.dragaoService.getDragoes().subscribe((dragoes: Dragoes[]) => {
