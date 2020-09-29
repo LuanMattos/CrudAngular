@@ -3,34 +3,66 @@
   margin-bottom: 50px;
 }
 .list-dragon table {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  table-layout: fixed;
   border-collapse: collapse;
+  border: 0.1px solid #ddd;
   width: 100%;
+  background-color: #e4dfe1;
+}
+.list-dragon table td {
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .list-dragon table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #c6c1c3;
 }
 .list-dragon table tr:hover {
   background-color: #ddd;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 .list-dragon table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #ca2e55;
   color: white;
 }
 .list-dragon td, .list-dragon table th {
-  border: 1px solid #ddd;
+  border: 0.1px solid #ddd;
   padding: 8px;
 }
 .list-dragon.btn-add-dragon {
   margin-right: 10px;
 }
 .list-dragon .btn-default-list {
+  background-color: #b62b4f;
+  border: none;
+  color: white;
   width: 60px !important;
   height: 30px !important;
   padding: 6px !important;
+  cursor: pointer;
+}
+.list-dragon .btn-default-list.hover {
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  background-color: #fc3565;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 16px !important;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=dragoes-detalhe.component.css.map */

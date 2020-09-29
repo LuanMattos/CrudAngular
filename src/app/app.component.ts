@@ -18,12 +18,15 @@ export class AppComponent implements OnInit{
   loading = false;
   user = {} as User;
   modal = true;
+  router: string;
 
 
   constructor(
     private dragaoService: DragoesService,
-    private router: Router,
-  ) {}
+    public _router: Router,
+  ) {
+    this.router = _router.url;
+  }
 
   ngOnInit() {
     this.getDragoes();
@@ -57,6 +60,11 @@ export class AppComponent implements OnInit{
     form.resetForm();
    // dragao = {} as Dragoes;
   }
-
+  startToLogin(){
+    this._router.navigate(['login']);
+  }
+  hasRoute() {
+    return this._router.url == '/';
+  }
 
 }

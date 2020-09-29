@@ -15,6 +15,7 @@ export class DragoesDetalheComponent implements OnInit {
   constructor(private dragaoService: DragoesService) { }
 
   ngOnInit(): void {
+  this.getDragoes();
   }
   getDragoes() {
     this.dragaoService.getDragoes().subscribe((dragoes: Dragoes[]) => {

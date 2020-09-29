@@ -1,23 +1,19 @@
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Gerenciamento de Dragões</li>
-  </ol>
-</nav>
+<h1>Gerenciamento de Dragões</h1>
 <div class="container">
   <div class="card list-dragon">
-    <h5 class="card-header">Lista de Dragões</h5>
+    <h2>Lista de Dragões</h2>
     <div class="card-body">
       <table class="table">
         <thead>
         <tr>
           <th class="text-center">Nome</th>
           <th class="text-center">Tipo</th>
-          <th class="text-center">Criado em</th>
+          <th width="100px" class="text-center">Criado em</th>
           <th class="text-center" width="120px">Ações</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let dragao of dragoes">
+        <tr *ngFor="let dragao of dragoes" >
           <td>{{dragao.name}}</td>
           <td>{{dragao.type}}</td>
           <td>{{dragao.createdAt | date:'d/m/y'}}</td>

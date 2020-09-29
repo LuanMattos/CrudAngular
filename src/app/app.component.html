@@ -1,5 +1,5 @@
-<div id="particles-js">
-  <div class="container">
+<div id="particles-js" *ngIf="hasRoute()">
+  <div class="container" >
     <div class="row top">
       <div class="twelve column">
         <h1>Patrick Luan de Mattos</h1>
@@ -37,7 +37,7 @@
               </a>
             </li>
             <li>
-              <div class="btn-start">Começar</div>
+              <div class="btn-start" (click)="startToLogin()">Começar</div>
             </li>
           </ul>
         </div>
