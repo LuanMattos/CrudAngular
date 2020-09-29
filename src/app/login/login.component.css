@@ -1,54 +1,8 @@
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 0.5px solid #d3e6ff;
-  box-sizing: border-box;
-}
-
-button {
-  opacity: 0.9;
-  color: white !important;
-  background-color: #e23461;
-  font-size: 24px;
-  width: 100%;
-  height: 50px;
-  border: 0;
-  padding: 7px;
-  margin: 8px 0;
-  border-radius: 1px;
-  text-align: center;
-  right: 20px;
-  cursor: pointer;
-}
-button:hover {
-  -webkit-transition: 0.5s;
-  opacity: 1;
-}
-
 /*Dragon Form*/
 .add-dragon {
   margin-bottom: 30px;
 }
 
-/*Responsive*/
-@-webkit-keyframes animatezoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-@keyframes animatezoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
 @media screen and (max-width: 300px) {
   span.psw {
     display: block;
@@ -67,11 +21,6 @@ button:hover {
 span.psw {
   float: right;
   padding-top: 16px;
-}
-
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s;
 }
 
 .text-center {

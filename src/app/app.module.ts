@@ -7,6 +7,7 @@ import { DragoesEditarComponent } from './dragoes-editar/dragoes-editar.componen
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,11 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'editar',
+    component: DragoesEditarComponent,
     pathMatch: 'full'
   },
   //{ path: '**', component: PageNotFoundComponent }
@@ -35,7 +41,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,6 +40,7 @@
 }
 .list-dragon .btn-default-list {
   background-color: #b62b4f;
+  margin: auto;
   border: none;
   color: white;
   width: 60px !important;
@@ -53,8 +54,18 @@
   -webkit-transition: 0.3s;
   background-color: #fc3565;
 }
+.list-dragon .btn-default-list:first-child {
+  border-right: 1px solid white;
+}
+.list-dragon .btn-default-list:last-child {
+  border-left: 1px solid white;
+}
 
 @media only screen and (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+
   h1 {
     font-size: 16px !important;
     margin-bottom: 10px;
@@ -62,6 +73,15 @@
 
   h2 {
     display: none;
+  }
+
+  .td-action {
+    width: 20%;
+  }
+
+  .btn-default-list {
+    max-width: 50px;
+    font-size: 12px;
   }
 }
 

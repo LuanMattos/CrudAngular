@@ -3,7 +3,8 @@ import { DragoesService } from './services/Dragoes.service';
 import { Dragoes } from './models/Dragoes';
 import { NgForm } from '@angular/forms';
 import {User} from "./models/user";
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -17,19 +18,19 @@ export class AppComponent implements OnInit{
   submitted = false;
   loading = false;
   user = {} as User;
-  modal = true;
   router: string;
+  id:string
 
 
   constructor(
     private dragaoService: DragoesService,
-    public _router: Router,
+    public _router: Router
   ) {
     this.router = _router.url;
   }
 
   ngOnInit() {
-    this.getDragoes();
+    this.getDragoes()
   }
   saveDragao(form: NgForm) {
     if (this.dragao.id !== undefined) {
