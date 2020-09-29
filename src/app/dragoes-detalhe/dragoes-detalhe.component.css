@@ -1,0 +1,36 @@
+/*Dragon List*/
+.list-dragon {
+  margin-bottom: 50px;
+}
+.list-dragon table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.list-dragon table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.list-dragon table tr:hover {
+  background-color: #ddd;
+}
+.list-dragon table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+.list-dragon td, .list-dragon table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.list-dragon.btn-add-dragon {
+  margin-right: 10px;
+}
+.list-dragon .btn-default-list {
+  width: 60px !important;
+  height: 30px !important;
+  padding: 6px !important;
+}
+
+/*# sourceMappingURL=dragoes-detalhe.component.css.map */
