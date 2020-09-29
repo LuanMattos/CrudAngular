@@ -57,16 +57,6 @@ export class AppComponent implements OnInit{
     form.resetForm();
    // dragao = {} as Dragoes;
   }
-  logar(form: NgForm){
-    var data = form.value;
 
-    if(data.login === 'admin' && data.password === 'admin'){
-      this.router.navigate(['listar']);
-      this.modal = false;
-    }else{
-      alert('Usuário/Senha incorretos')
-      this.cleanForm(form);
-    }
-  }
 
 }

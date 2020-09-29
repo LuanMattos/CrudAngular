@@ -1,20 +1,3 @@
-<div class="modal" [ngClass]="{ 'hide': !modal }">
-    <form id="login-form" class="modal-content animate" (ngSubmit)="f.form.valid && logar(f)" #f="ngForm" novalidate>
-    <div class="container">
-      <label class="text-login">Login</label>
-      <input type="text" [(ngModel)]="user.login" #login="ngModel" placeholder="Usuário/E-mail(admin)" id="login" name="login" [ngClass]="{ 'is-invalid': f.submitted && login.invalid }" required>
-      <div *ngIf="f.submitted && login.invalid" class="invalid-feedback">
-        <div *ngIf="login.errors">Login é obrigatório</div>
-      </div>
-      <label class="text-login">Senha</label>
-      <input type="text" [(ngModel)]="user.password" #password="ngModel" placeholder="Senha(admin)" id="password" name="password" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required>
-      <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-        <div *ngIf="login.errors">Senha é obrigatória</div>
-      </div>
-      <button type="submit">Logar</button>
-    </div>
-  </form>
-</div>
 <router-outlet></router-outlet>
 
 

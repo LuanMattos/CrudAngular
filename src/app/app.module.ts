@@ -6,12 +6,17 @@ import { DragoesDetalheComponent } from './dragoes-detalhe/dragoes-detalhe.compo
 import { DragoesEditarComponent } from './dragoes-editar/dragoes-editar.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login/login.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   {
     path: 'listar',
     component: DragoesDetalheComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
     pathMatch: 'full'
   },
   //{ path: '**', component: PageNotFoundComponent }
