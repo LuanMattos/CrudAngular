@@ -46,6 +46,7 @@ export class DragoesDetalheComponent implements OnInit {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'name': return compare(a.name, b.name, isAsc);
+        case 'type': return compare(a.type, b.type, isAsc);
         default: return 0;
       }
     });
@@ -53,8 +54,8 @@ export class DragoesDetalheComponent implements OnInit {
       return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
   }
-
-
-
+  addDragon(){
+    this.router.navigate(['editar']);
+  }
 
 }

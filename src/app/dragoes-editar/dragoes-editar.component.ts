@@ -25,11 +25,7 @@ export class DragoesEditarComponent implements OnInit {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     this.id = urlParams.get('id');
-    if(!this.id){
-      alert('Erro Geral!')
-    }else{
-      this.editDragao(this.id);
-    }
+    this.editDragao(this.id);
   }
   cancel(){
     this.router.navigate(['listar']);
