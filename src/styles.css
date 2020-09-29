@@ -1,1 +1,7 @@
+body {
+  background: #282931 ;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Varela Round', sans-serif;
+  height: 100%;
+}
 /* You can add global styles to this file, and also import other style files */

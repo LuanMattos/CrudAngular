@@ -1,3 +1,112 @@
+body {
+  background: #282931;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Varela Round", sans-serif;
+  height: 100%;
+}
 
+canvas {
+  height: 100vh;
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+}
+
+a {
+  color: #bbbbc4;
+  text-decoration: none;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover {
+  color: white;
+}
+
+li {
+  margin: 8px;
+}
+li div.btn-start {
+  color: white !important;
+  background-color: #e23461;
+  font-size: 24px;
+  width: 200px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 1px;
+  text-align: center;
+  right: 20px;
+  cursor: pointer;
+}
+
+h1 {
+  color: #fc3565;
+  padding-bottom: 0px;
+  margin-bottom: 1%;
+}
+
+h2 {
+  color: #555560;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  font-family: "Monoton", cursive;
+  color: white;
+  font-size: 8rem;
+}
+
+.top {
+  padding-bottom: 5rem;
+}
+
+.pulled ul li {
+  list-style: none;
+  margin-right: 2rem;
+  font-size: 1.8rem;
+}
+
+.pulled h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.pulled ul li span {
+  font-size: 1.2rem;
+}
+
+.footer {
+  padding-top: 5rem;
+}
+
+.footer p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+span.new {
+  background-color: #fc3565;
+  font-weight: 700;
+  padding: 0.2rem;
+  margin-left: 0.4rem;
+  color: #fff;
+}
+
+/* Mobile first queries */
+/* Larger than mobile */
+/* Larger than phablet */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
 
 /*# sourceMappingURL=app.component.css.map */
