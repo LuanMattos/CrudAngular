@@ -57,5 +57,9 @@ export class DragoesDetalheComponent implements OnInit {
   addDragon(){
     this.router.navigate(['editar']);
   }
+  close(){
+    localStorage.setItem("auth", "b");
+    this.router.navigate(['login']);
+  }
 
 }
