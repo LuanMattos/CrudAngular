@@ -3,7 +3,7 @@ import { DragoesService } from '../services/Dragoes.service';
 import { Dragoes } from '../models/Dragoes';
 
 import {NgForm} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
+import { Router, ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class DragoesEditarComponent implements OnInit {
   loading = false;
   id;
 
-  constructor(private dragaoService: DragoesService,  private route: ActivatedRoute,) { }
+  constructor(private dragaoService: DragoesService,  private router: Router,) { }
 
   ngOnInit(): void {
     const queryString = window.location.search;
@@ -31,6 +31,9 @@ export class DragoesEditarComponent implements OnInit {
       this.editDragao(this.id);
     }
   }
+  cancel(){
+    this.router.navigate(['listar']);
+  }
   saveDragao(form: NgForm) {
     if (this.dragao.id !== undefined) {
       this.dragaoService.updateDragao(this.dragao).subscribe(() => {
@@ -41,11 +44,15 @@ export class DragoesEditarComponent implements OnInit {
         this.cleanForm(form);
       });
     }
+    this.redirectTo('listar')
   }
   editDragao(id) {
     this.dragaoService.getDragaoById(id).subscribe((response) => {
       this.dragao = response;
     });
+  }
+  redirectTo(value){
+    this.router.navigate([value]);
   }
   cleanForm(form: NgForm) {
     form.resetForm();

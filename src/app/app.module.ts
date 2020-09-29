@@ -8,6 +8,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSortModule} from '@angular/material/sort';
+
 
 const appRoutes: Routes = [
   {
@@ -42,7 +45,9 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
