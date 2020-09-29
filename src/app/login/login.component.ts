@@ -22,14 +22,18 @@ export class LoginComponent implements OnInit {
   }
   logar(form: NgForm){
     var data = form.value;
+    localStorage.setItem("auth", "b");
 
     if(data.login === 'admin' && data.password === 'admin'){
       this.router.navigate(['listar']);
+      localStorage.setItem("auth", "a");
       this.modal = false;
     }else{
+      localStorage.setItem("auth", "b");
       alert('Usuário/Senha incorretos')
       this.cleanForm(form);
     }
+
   }
   cleanForm(form: NgForm) {
     form.resetForm();

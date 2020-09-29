@@ -12,13 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSortModule} from '@angular/material/sort';
 import {registerLocaleData} from "@angular/common";
 import localeBr from "@angular/common/locales/pt";
+registerLocaleData(localeBr, 'pt');
 
-registerLocaleData(localeBr, 'pt')
 const appRoutes: Routes = [
   {
     path: 'listar',
-    component: DragoesDetalheComponent,
-    pathMatch: 'full'
+    component:DragoesDetalheComponent,
+    pathMatch: 'full',
   },
   {
     path: 'login',
@@ -29,9 +29,9 @@ const appRoutes: Routes = [
     path: 'editar',
     component: DragoesEditarComponent,
     pathMatch: 'full'
-  },
-  //{ path: '**', component: PageNotFoundComponent }
+  }
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,4 +54,5 @@ const appRoutes: Routes = [
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
