@@ -70,8 +70,6 @@ ul{
     list-style: none;
   }
 }
-
-
 .btn-plus{
   color:white;
   cursor: pointer;
@@ -99,6 +97,9 @@ a {
   &:hover {
     color: white;
   }
+}
+.text-white{
+  color:#bbbbc4 !important;
 }
 .m-auto{
   margin:auto !important;

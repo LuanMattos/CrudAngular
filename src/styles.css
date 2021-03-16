@@ -108,6 +108,10 @@ a:hover {
   color: white;
 }
 
+.text-white {
+  color: #bbbbc4 !important;
+}
+
 .m-auto {
   margin: auto !important;
 }

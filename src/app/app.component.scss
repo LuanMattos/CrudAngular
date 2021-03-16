@@ -9,13 +9,7 @@
     }
   }
 
-  .icon-menu {
-    cursor: pointer;
-    color: #bbbbc4;
-    margin-right: 10px;
-  }
-
-  .footer {
+  .desktop {
     padding: 10px;
     position: fixed;
     bottom: 0;
@@ -29,7 +23,13 @@
     padding: 0;
     margin: 0;
     @include span-menu();
-    animation: fading 1s
+    animation: fading 1s;
+
+    .icon-menu {
+      cursor: pointer;
+      color: #bbbbc4;
+      margin-right: 10px;
+    }
   }
 
   .menu-mobile {
@@ -41,9 +41,7 @@
   }
 
   @media screen and (max-width: 800px) {
-    .menu-mobile-header{
-      margin-bottom: 100px;
-    }
+
     .items-mobile {
       font-size: 24px;
       z-index: 1000;
@@ -52,6 +50,9 @@
       opacity: .6;
       width: 100vw;
       height: 100vh;
+      .menu-mobile-header {
+        margin-bottom: 100px;
+      }
     }
     .menu-mobile {
       display: block;

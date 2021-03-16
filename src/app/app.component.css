@@ -1,14 +1,9 @@
-#container-general-home .icon-menu {
-  cursor: pointer;
-  color: #bbbbc4;
-  margin-right: 10px;
-}
-#container-general-home .footer {
+#container-general-home .desktop {
   padding: 10px;
   position: fixed;
   bottom: 0;
 }
-#container-general-home .footer a {
+#container-general-home .desktop a {
   padding: 10px;
 }
 #container-general-home .items-mobile {
@@ -21,6 +16,11 @@
   color: #bbbbc4;
   float: right;
   font-size: 40px;
+  margin-right: 10px;
+}
+#container-general-home .items-mobile .icon-menu {
+  cursor: pointer;
+  color: #bbbbc4;
   margin-right: 10px;
 }
 #container-general-home .menu-mobile {
@@ -37,9 +37,6 @@
   margin-right: 10px;
 }
 @media screen and (max-width: 800px) {
-  #container-general-home .menu-mobile-header {
-    margin-bottom: 100px;
-  }
   #container-general-home .items-mobile {
     font-size: 24px;
     z-index: 1000;
@@ -48,6 +45,9 @@
     opacity: 0.6;
     width: 100vw;
     height: 100vh;
+  }
+  #container-general-home .items-mobile .menu-mobile-header {
+    margin-bottom: 100px;
   }
   #container-general-home .menu-mobile {
     display: block;
