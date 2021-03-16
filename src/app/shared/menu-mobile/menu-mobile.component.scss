@@ -1,0 +1,48 @@
+#menu-mobile{
+  @mixin span-menu() {
+    span {
+      cursor: pointer;
+      color: #bbbbc4;
+      float: right;
+      font-size: 40px;
+      margin-right: 10px;
+    }
+  }
+  .menu-mobile {
+    margin: 0;
+    padding: 0;
+    color: #bbbbc4;
+    display: none;
+    @include span-menu();
+  }
+  .items-mobile {
+    padding: 0;
+    margin: 0;
+    @include span-menu();
+    animation: fading 1s;
+
+    .icon-menu {
+      cursor: pointer;
+      color: #bbbbc4;
+      margin-right: 10px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .items-mobile {
+      font-size: 24px;
+      z-index: 1000;
+      position: fixed;
+      background-color: black;
+      opacity: .6;
+      width: 100vw;
+      height: 100vh;
+      .menu-mobile-header {
+        margin-bottom: 100px;
+      }
+    }
+    .menu-mobile {
+      display: block;
+    }
+  }
+}
+

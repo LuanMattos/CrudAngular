@@ -1,24 +1,5 @@
 <div *ngIf="hasRoute()" id="container-general-home">
-  <div class="menu-mobile">
-    <span *ngIf="!menu" class="icon-menu" (click)="toogleMenu()"> &#9776; </span>
-  </div>
-  <div class="items-mobile m-auto" *ngIf="menu">
-    <div class="menu-mobile-header">
-      <span *ngIf="menu" class="icon-menu" (click)="toogleMenu()"> &#10006; </span>
-    </div>
-    <div class="m-auto text-center mt-20">
-      <a target="_blank" href="https://www.linkedin.com/in/luan-mattos/" class="text-center">Linkedin</a>
-    </div>
-    <div class="m-auto text-center mt-20">
-      <a target="_blank" href="https://github.com/LuanMattos" class="text-center">GitHub</a>
-    </div>
-    <div class="m-auto text-center mt-20">
-      <a target="_blank" href="https://github.com/LuanMattos/CrudAngular" class="text-center">Repositório do projeto</a>
-    </div>
-    <div class="m-auto text-center mt-20">
-      <a target="_blank" href="https://www.mycircle.click" class="text-center">MyCircle</a>
-    </div>
-  </div>
+  <app-menu-mobile></app-menu-mobile>
   <div class="container">
     <div class="footer desktop">
       <span class="text-white">Redes sociais/Projetos:</span>

@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { DragoesDetalheComponent } from './dragoes-detalhe/dragoes-detalhe.component';
-import { DragoesEditarComponent } from './dragoes-editar/dragoes-editar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import localeBr from '@angular/common/locales/pt';
 registerLocaleData(localeBr, 'pt');
+
+
+import { DragoesDetalheComponent } from './dragoes-detalhe/dragoes-detalhe.component';
+import { DragoesEditarComponent } from './dragoes-editar/dragoes-editar.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import {MenuMobileComponent} from './shared/menu-mobile/menu-mobile.component';
+import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
   {
@@ -36,7 +39,8 @@ const appRoutes: Routes = [
     AppComponent,
     DragoesDetalheComponent,
     DragoesEditarComponent,
-    LoginComponent
+    LoginComponent,
+    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

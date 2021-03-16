@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
   user = {} as User;
   router: string;
   id: string;
-  menu = false;
+
 
 
   constructor(
@@ -28,9 +28,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     // this.isLoggedSimple();
   }
-  toogleMenu(): void{
-   this.menu = !this.menu;
-  }
+
   startToLogin(): void{
     this.route.navigate(['login']);
   }
