@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MenuMobileComponent} from './shared/menu-mobile/menu-mobile.component';
 import { AppComponent } from './app.component';
+import {FooterComponent} from './shared/footer/footer.component';
 
 const appRoutes: Routes = [
   {
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     DragoesDetalheComponent,
     DragoesEditarComponent,
     LoginComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

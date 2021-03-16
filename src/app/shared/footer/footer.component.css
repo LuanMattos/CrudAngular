@@ -1,0 +1,15 @@
+#footer .desktop {
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+#footer .desktop a {
+  padding: 10px;
+}
+@media screen and (max-width: 800px) {
+  #footer .desktop {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=footer.component.css.map */

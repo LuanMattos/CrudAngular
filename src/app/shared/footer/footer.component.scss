@@ -1,0 +1,18 @@
+#footer {
+  .desktop {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+
+    a {
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .desktop {
+      display: none;
+    }
+  }
+}
+

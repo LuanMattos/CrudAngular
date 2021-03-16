@@ -1,15 +1,3 @@
-#container-general-home .desktop {
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-}
-#container-general-home .desktop a {
-  padding: 10px;
-}
-@media screen and (max-width: 800px) {
-  #container-general-home .desktop {
-    display: none;
-  }
-}
+
 
 /*# sourceMappingURL=app.component.css.map */
