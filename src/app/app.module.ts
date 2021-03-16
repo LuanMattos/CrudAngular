@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {MenuMobileComponent} from './shared/menu-mobile/menu-mobile.component';
 import { AppComponent } from './app.component';
 import {FooterComponent} from './shared/footer/footer.component';
+import {FormLoginComponent} from './shared/form-login/form-login.component';
 
 const appRoutes: Routes = [
   {
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     DragoesEditarComponent,
     LoginComponent,
     MenuMobileComponent,
-    FooterComponent
+    FooterComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,

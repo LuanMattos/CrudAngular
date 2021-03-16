@@ -108,6 +108,10 @@ a:hover {
   color: white;
 }
 
+.text-muted {
+  color: #565f79 !important;
+}
+
 .text-white {
   color: #bbbbc4 !important;
 }

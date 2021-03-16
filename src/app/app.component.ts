@@ -17,8 +17,6 @@ export class AppComponent implements OnInit{
   router: string;
   id: string;
 
-
-
   constructor(
     public route: Router
   ) {
