@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import localeBr from '@angular/common/locales/pt';
@@ -17,10 +17,11 @@ import {MenuMobileComponent} from './shared/menu-mobile/menu-mobile.component';
 import { AppComponent } from './app.component';
 import {FooterComponent} from './shared/footer/footer.component';
 import {FormLoginComponent} from './shared/form-login/form-login.component';
+import {SigninService} from './services/signin/signin.service';
 
 const appRoutes: Routes = [
   {
-    path: 'listar',
+    path: 'dashboard',
     component: DragoesDetalheComponent,
     pathMatch: 'full',
   },
@@ -52,12 +53,13 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
+      {enableTracing: true}
     ),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, SigninService],
   bootstrap: [AppComponent]
 })
 

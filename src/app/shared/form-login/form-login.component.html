@@ -1,14 +1,14 @@
 <div id="form-login">
   <div class="container">
     <span class="error animated"></span>
-    <form name="form1" class="box" onsubmit="return checkStuff()">
+    <form name="form1" class="box" [formGroup]="loginForm" (submit)="login()" #form="ngForm">
       <h4>
         <span class="text-muted">Admin</span>
         <span>Dragões</span>
       </h4>
       <h5>Para interagir faça login</h5>
-      <input type="text" placeholder="Usuário (admin)" autocomplete="off">
-      <input type="password" placeholder="Senha (admin)" autocomplete="off">
+      <input type="text" placeholder="Usuário (admin)" autocomplete="off"  formControlName="user">
+      <input type="password" placeholder="Senha (admin)" autocomplete="off"  formControlName="password">
       <input type="submit" value="Login" class="btn1">
     </form>
   </div>
