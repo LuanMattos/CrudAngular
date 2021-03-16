@@ -1,12 +1,23 @@
 import {Injectable} from '@angular/core';
+import {TokenService} from '../token/token.service';
 
 const API = 'example.com';
 
 @Injectable()
 export class SigninService{
-  constructor() {}
+  constructor(
+    private tokenService: TokenService
+  ) {}
 
   login( data ): boolean{
-    return (data.user === 'admin' && data.password === 'admin');
+    if (data.user === 'admin' && data.password === 'admin'){
+      this.tokenService.setToken('logged');
+      return true;
+    }
+    this.tokenService.removeToken();
+    return false;
+  }
+  logout(): void{
+    this.tokenService.removeToken();
   }
 }

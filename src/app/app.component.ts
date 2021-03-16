@@ -19,25 +19,7 @@ export class AppComponent implements OnInit{
 
   constructor(
     public route: Router
-  ) {
-    // this.router = route.url;
-  }
+  ) {}
 
-  ngOnInit(): void {
-    // this.isLoggedSimple();
-  }
-
-  startToLogin(): void{
-    this.route.navigate(['login']);
-  }
-  hasRoute(): boolean {
-    return this.route.url === '/';
-  }
-  isLoggedSimple(): void{
-    const auth = localStorage.getItem('auth');
-    if (auth !== 'a') {
-      this.route.navigate(['login']);
-    }
-  }
-
+  ngOnInit(): void {}
 }

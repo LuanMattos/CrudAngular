@@ -18,5 +18,8 @@
     <div class="m-auto text-center mt-20">
       <a target="_blank" href="https://www.mycircle.click" class="text-center">MyCircle</a>
     </div>
+    <div class="m-auto text-center mt-20" *ngIf="hasRoute()">
+      <a (click)="logout()"  class="text-center cursor-pointer">Sair</a>
+    </div>
   </div>
 </div>

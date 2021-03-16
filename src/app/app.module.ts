@@ -21,14 +21,21 @@ import {SigninService} from './services/signin/signin.service';
 
 const appRoutes: Routes = [
   {
-    path: 'dashboard',
-    component: DragoesDetalheComponent,
+    path: '',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
-    path: 'login',
+    path: 'home',
     component: LoginComponent,
-    pathMatch: 'full'
+    data: {
+      title: 'Home'
+    }
+  },
+  {
+    path: 'dashboard',
+    component: DragoesDetalheComponent,
+    pathMatch: 'full',
   },
   {
     path: 'editar',
