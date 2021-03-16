@@ -11,18 +11,18 @@
       </li>
     </ul>
     <div class="card-body">
-      <table class="table" matSort (matSortChange)="sortData($event)">
+      <table class="table">
         <thead>
         <tr>
-          <th mat-sort-header="name"  width="40" class="text-center">Nome</th>
-          <th mat-sort-header="type" width="20" class="text-center">Tipo</th>
+          <th width="40" class="text-center">Nome</th>
+          <th width="20" class="text-center">Tipo</th>
           <th width="20" class="text-center">Criado em</th>
           <th width="1" class="text-center td-action">Ações</th>
         </tr>
         </thead>
         <tbody>
           <tr  *ngFor="let dragao of dragoes">
-            <td matSort matSortActive="name" matSortDirection="asc" (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
+            <td (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
             <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
             <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt | date}}</td>
             <td align="center">

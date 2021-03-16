@@ -1,26 +1,16 @@
+html{
+  padding: 0;
+  margin: 0;
+}
 body {
   background: #282931 ;
   -webkit-font-smoothing: antialiased;
   font-family: 'Varela Round', sans-serif;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
-h1 {
-  color: #fc3565;
-  padding-bottom: 0px;
-  margin-bottom: 1%;
-}
-
-h2 {
-  color: #555560;
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: 15px;
-}
-.text-center{
-  text-align: center !important;
-}
+@keyframes fading{0%{opacity:0}50%{opacity:1}}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -49,34 +39,9 @@ button {
   }
 }
 
-/*General dinamic css*/
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.invalid-feedback {
-  color: red;
-  font-size: 10px;
-  padding: 5px;
-  float: right;
-}
-
-.hide {
-  display: none;
 }
 
 /*Animations default*/
@@ -105,9 +70,7 @@ ul{
     list-style: none;
   }
 }
-.float-rigth{
-  float: right;
-}
+
 
 .btn-plus{
   color:white;
@@ -124,4 +87,86 @@ ul{
     background-color: #fc3565;
   }
 }
-/* You can add global styles to this file, and also import other style files */
+a {
+  color: #bbbbc4;
+  text-decoration: none;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+
+  &:hover {
+    color: white;
+  }
+}
+.m-auto{
+  margin:auto !important;
+}
+.text-center{
+  text-align: center !important;
+}
+.hide {
+  display: none !important;
+}
+.float-rigth{
+  float: right !important;
+}
+.float-left{
+  float: left !important;
+}
+.p-0{
+  padding: 0 !important;
+}
+.p-10{
+  padding: 10px !important;
+}
+.p-20{
+  padding: 20px !important;
+}
+//---
+.m-0{
+  margin: 0 !important;
+}
+.m-10{
+  margin: 10px !important;
+}
+.m-20{
+  margin: 20px !important;
+}
+//--
+.mt-0{
+  margin-top: 0 !important;
+}
+.mt-10{
+  margin-top: 10px !important;
+}
+.mt-20{
+  margin-top: 20px !important;
+}
+.mt-40{
+  margin-top: 40px !important;
+}
+//--
+.pt-0{
+  padding-top: 0 !important;
+}
+.pt-10{
+  padding-top: 10px !important;
+}
+.pt-20{
+  padding-top: 20px !important;
+}
+//--
+.mb-0{
+  margin-bottom: 0 !important;
+}
+.mb-10{
+  margin-bottom: 10px !important;
+}
+.mb-20{
+  margin-bottom: 20px !important;
+}
+.mb-40{
+  margin-bottom: 40px !important;
+}

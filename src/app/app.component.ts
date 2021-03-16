@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { DragoesService } from './services/Dragoes.service';
 import { Dragoes } from './models/Dragoes';
-import { NgForm } from '@angular/forms';
-import {User} from "./models/user";
-import { Router, ActivatedRoute} from '@angular/router';
+import {User} from './models/user';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -13,35 +11,36 @@ import { Router, ActivatedRoute} from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'Dragões';
-  dragao = {} as Dragoes;
-  dragoes:Dragoes[];
-  submitted = false;
+  dragoes: Dragoes[];
   loading = false;
   user = {} as User;
   router: string;
-  id:string
+  id: string;
+  menu = false;
 
 
   constructor(
-    public _router: Router
+    public route: Router
   ) {
-    this.router = _router.url;
+    // this.router = route.url;
   }
 
-  ngOnInit() {
-    this.isLoggedSimple()
+  ngOnInit(): void {
+    // this.isLoggedSimple();
   }
-
-  startToLogin(){
-    this._router.navigate(['login']);
+  toogleMenu(): void{
+   this.menu = !this.menu;
   }
-  hasRoute() {
-    return this._router.url == '/';
+  startToLogin(): void{
+    this.route.navigate(['login']);
   }
-  isLoggedSimple(){
-    var auth = localStorage.getItem("auth")
-    if(auth !== 'a') {
-      this._router.navigate(['login']);
+  hasRoute(): boolean {
+    return this.route.url === '/';
+  }
+  isLoggedSimple(): void{
+    const auth = localStorage.getItem('auth');
+    if (auth !== 'a') {
+      this.route.navigate(['login']);
     }
   }
 

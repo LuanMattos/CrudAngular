@@ -1,58 +1,34 @@
-<div id="particles-js" *ngIf="hasRoute()">
-  <div class="container" >
-    <div class="row top">
-      <div class="twelve column">
-        <h1>Patrick Luan de Mattos</h1>
-        <h2> Web Developer</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column">
-        <div class="pens pulled">
-          <h1>Desafio cadastro de dragões</h1>
-          <ul>
-            <li>
-              <a rel="noopener noreferrer" href="#">
-                Listar os dragões
-              </a>
-            </li>
-            <li>
-              <a  rel="noopener noreferrer" href="#">
-                Excluir dragões
-              </a></li>
-            <li>
-              <a  rel="noopener noreferrer" href="#">
-                Inserir Dragões
-              </a>
-            </li>
-            <li>
-              <a  rel="noopener noreferrer" href="#">
-                Atualizar Dragões
-              </a>
-            </li>
-            <li>
-              <a rel="noopener noreferrer" href="#">
-                Tela de Login
-              </a>
-            </li>
-            <li>
-              <div class="btn-start" (click)="startToLogin()">Começar</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<div *ngIf="hasRoute()" id="container-general-home">
+  <div class="menu-mobile">
+    <span *ngIf="!menu" class="icon-menu" (click)="toogleMenu()"> &#9776; </span>
   </div>
-
-  <div class="container ">
-    <div class="footer">
-      <p>Redes sociais: <a target="_blank" href="https://www.linkedin.com/in/luan-mattos/">Linkedin</a>,
-        <a target="_blank" href="https://github.com/LuanMattos">GitHub</a> &
-        <a target="_blank" href="https://github.com/LuanMattos/CrudAngular">Repositório do projeto</a></p></div>
+  <div class="items-mobile m-auto" *ngIf="menu">
+    <div class="menu-mobile-header">
+      <span *ngIf="menu" class="icon-menu" (click)="toogleMenu()"> &#10006; </span>
+    </div>
+    <div class="m-auto text-center mt-20">
+      <a target="_blank" href="https://www.linkedin.com/in/luan-mattos/" class="text-center">Linkedin</a>
+    </div>
+    <div class="m-auto text-center mt-20">
+      <a target="_blank" href="https://github.com/LuanMattos" class="text-center">GitHub</a>
+    </div>
+    <div class="m-auto text-center mt-20">
+      <a target="_blank" href="https://github.com/LuanMattos/CrudAngular" class="text-center">Repositório do projeto</a>
+    </div>
+    <div class="m-auto text-center mt-20">
+      <a target="_blank" href="https://www.mycircle.click" class="text-center">MyCircle</a>
+    </div>
+    <div class="container">
+      <div class="footer desktop">
+        <span>Redes sociais/Projetos:</span>
+        <a target="_blank" href="https://www.linkedin.com/in/luan-mattos/">Linkedin</a>
+        <a target="_blank" href="https://github.com/LuanMattos">GitHub</a>
+        <a target="_blank" href="https://github.com/LuanMattos/CrudAngular">Repositório do projeto</a>
+        <a target="_blank" href="https://www.mycircle.click">MyCircle</a>
+      </div>
+    </div>
   </div>
 </div>
-
 <router-outlet></router-outlet>
 
 
