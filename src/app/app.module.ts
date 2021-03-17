@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import {FooterComponent} from './shared/footer/footer.component';
 import {FormLoginComponent} from './shared/form-login/form-login.component';
 import {SigninService} from './services/signin/signin.service';
+import {AuthRequiredGuard} from "./services/auth/auth-required.guard";
 
 const appRoutes: Routes = [
   {
@@ -34,11 +35,13 @@ const appRoutes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate: [AuthRequiredGuard],
     component: DragoesDetalheComponent,
     pathMatch: 'full',
   },
   {
     path: 'editar',
+    canActivate: [AuthRequiredGuard],
     component: DragoesEditarComponent,
     pathMatch: 'full'
   }

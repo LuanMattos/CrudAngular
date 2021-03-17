@@ -20,4 +20,7 @@ export class SigninService{
   logout(): void{
     this.tokenService.removeToken();
   }
+  isLogged(): boolean{
+    return this.tokenService.hasToken();
+  }
 }
