@@ -1,26 +1,25 @@
-<h1>Gerenciamento de Dragões</h1>
-<div class="item-close" (click)="close()">
-  Sair
-</div>
-<div class="container">
-  <div class="card list-dragon">
-    <h2>Lista de Dragões</h2>
-    <ul>
-      <li>
-        <span class="btn-plus float-rigth" (click)="addDragon()">+</span>
-      </li>
-    </ul>
-    <div class="card-body">
-      <table class="table">
-        <thead>
-        <tr>
-          <th width="40" class="text-center">Nome</th>
-          <th width="20" class="text-center">Tipo</th>
-          <th width="20" class="text-center">Criado em</th>
-          <th width="1" class="text-center td-action">Ações</th>
-        </tr>
-        </thead>
-        <tbody>
+<div id="dragoes-lista">
+  <div class="item-close text-white float-rigth" (click)="logout()">
+    Sair
+  </div>
+  <div class="container">
+    <div class="card list-dragon">
+      <ul>
+        <li>
+          <span class="btn-plus float-rigth" (click)="addDragon()">+</span>
+        </li>
+      </ul>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th width="40" class="text-center">Nome</th>
+            <th width="20" class="text-center">Tipo</th>
+            <th width="20" class="text-center">Criado em</th>
+            <th width="1" class="text-center td-action">Ações</th>
+          </tr>
+          </thead>
+          <tbody>
           <tr  *ngFor="let dragao of dragoes">
             <td (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
             <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
@@ -29,8 +28,9 @@
               <button type="button" class="btn-default-list" (click)="deleteDragao(dragao)">Deletar</button>
             </td>
           </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

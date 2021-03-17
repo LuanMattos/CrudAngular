@@ -1,44 +1,43 @@
-/*Dragon List*/
-.list-dragon {
+#dragoes-lista .list-dragon {
   margin-bottom: 50px;
 }
-.list-dragon table {
+#dragoes-lista .list-dragon table {
   table-layout: fixed;
   border-collapse: collapse;
   border: 0.1px solid #ddd;
   width: 100%;
   background-color: #e4dfe1;
 }
-.list-dragon table td {
+#dragoes-lista .list-dragon table td {
   width: 60px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.list-dragon table tr:nth-child(even) {
+#dragoes-lista .list-dragon table tr:nth-child(even) {
   background-color: #c6c1c3;
 }
-.list-dragon table tr:hover {
+#dragoes-lista .list-dragon table tr:hover {
   background-color: #ddd;
   -o-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
 }
-.list-dragon table th {
+#dragoes-lista .list-dragon table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #ca2e55;
   color: white;
 }
-.list-dragon td, .list-dragon table th {
+#dragoes-lista .list-dragon td, #dragoes-lista .list-dragon table th {
   border: 0.1px solid #ddd;
   padding: 8px;
 }
-.list-dragon.btn-add-dragon {
+#dragoes-lista .list-dragon.btn-add-dragon {
   margin-right: 10px;
 }
-.list-dragon .btn-default-list {
+#dragoes-lista .list-dragon .btn-default-list {
   background-color: #b62b4f;
   margin: auto;
   border: none !important;
@@ -48,41 +47,40 @@
   padding: 6px !important;
   cursor: pointer;
 }
-.list-dragon .btn-default-list.hover {
+#dragoes-lista .list-dragon .btn-default-list.hover {
   -o-transition: 0.3s;
   -moz-transition: 0.3s;
   -webkit-transition: 0.3s;
   background-color: #fc3565;
 }
-
-@media only screen and (max-width: 600px) {
-  table {
+#dragoes-lista .item-close {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  #dragoes-lista .item-close {
+    padding: 15px;
+    display: block;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 800px) {
+  #dragoes-lista table {
     font-size: 12px;
   }
-
-  h1 {
+  #dragoes-lista h1 {
     font-size: 16px !important;
     margin-bottom: 10px;
   }
-
-  h2 {
+  #dragoes-lista h2 {
     display: none;
   }
-
-  .td-action {
+  #dragoes-lista .td-action {
     width: 20%;
   }
-
-  .btn-default-list {
+  #dragoes-lista .btn-default-list {
     max-width: 50px;
     font-size: 12px;
   }
-}
-.item-close {
-  color: white;
-  float: right;
-  margin-right: 2.8%;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=dragoes-detalhe.component.css.map */
