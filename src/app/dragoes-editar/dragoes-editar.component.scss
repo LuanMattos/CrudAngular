@@ -25,6 +25,10 @@
   }
   .btn{
     margin-right:20px;
+    &:disabled{
+      background: #565f79;
+      color:#b7b7b7;
+    }
   }
   input[type = "text"]{
     background: #ebeeff;

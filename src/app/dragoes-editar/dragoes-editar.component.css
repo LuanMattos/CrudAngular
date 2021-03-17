@@ -25,6 +25,10 @@
 #edit .btn {
   margin-right: 20px;
 }
+#edit .btn:disabled {
+  background: #565f79;
+  color: #b7b7b7;
+}
 #edit input[type=text] {
   background: #ebeeff;
   border: 0;
