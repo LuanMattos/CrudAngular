@@ -4,6 +4,11 @@
 #dragoes-lista .table-wrapper {
   box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
 }
+#dragoes-lista .table-wrapper .title {
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+}
 #dragoes-lista .table-wrapper .fl-table {
   margin: auto;
   margin-top: 70px;
