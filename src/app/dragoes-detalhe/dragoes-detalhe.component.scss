@@ -7,13 +7,14 @@
     box-shadow: 0 35px 50px rgba(0, 0, 0, 0.2);
 
     .fl-table {
+      margin:auto;
       margin-top: 70px;
       border-radius: 14px;
       font-size: 12px;
       font-weight: normal;
       border: none;
       border-collapse: collapse;
-      width: 100%;
+      width: 90%;
       max-width: 100%;
       white-space: nowrap;
       background-color: white;
@@ -72,6 +73,7 @@
         thead, tbody, thead th {
           display: block;
           border-radius: unset;
+          width: auto;
         }
         thead th:last-child {
           border-bottom: none;
@@ -117,6 +119,7 @@
           border-right: 1px solid #E6E4E4;
         }
         tbody td {
+          min-width: 235px;
           display: block;
           text-align: center;
         }
