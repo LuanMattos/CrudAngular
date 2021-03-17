@@ -14,6 +14,10 @@
   height: 400px;
   box-shadow: 1px 1px 108.8px 19.2px #191f35;
 }
+#form-login .container .msg-validate {
+  font-size: 10px;
+  font-weight: 100;
+}
 #form-login .container .box h4 span {
   color: #dfdeee;
   font-weight: lighter;
@@ -88,6 +92,10 @@
 }
 #form-login .container .btn1:hover {
   background: #5d33e6;
+}
+#form-login .container .btn1:disabled {
+  background: #565f79;
+  color: #7a7a7a;
 }
 #form-login .container .rmb {
   position: absolute;

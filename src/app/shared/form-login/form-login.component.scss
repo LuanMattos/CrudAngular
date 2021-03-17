@@ -1,5 +1,9 @@
 #form-login {
   .container{
+    .msg-validate{
+      font-size: 10px;
+      font-weight:100;
+    }
     margin: 0;
     top: 70px;
     left: 50%;
@@ -96,6 +100,10 @@
 
     .btn1:hover {
       background: #5d33e6;
+    }
+    .btn1:disabled{
+      background: #565f79;
+      color:#7a7a7a;
     }
 
     .rmb {

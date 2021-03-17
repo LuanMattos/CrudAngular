@@ -9,7 +9,8 @@
       <h5>Para interagir faça login</h5>
       <input type="text" placeholder="Usuário (admin)" autocomplete="off"  formControlName="user">
       <input type="password" placeholder="Senha (admin)" autocomplete="off"  formControlName="password">
-      <input type="submit" value="Login" class="btn1">
+      <input type="submit" value="Login" class="btn1" [disabled]="loginForm.invalid">
+      <span class="text-danger msg-validate">{{messageValid}}</span>
     </form>
   </div>
 </div>

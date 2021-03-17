@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./form-login.component.scss']
 })
 export class FormLoginComponent implements OnInit{
+  messageValid: string;
   constructor(
     private formBuilder: FormBuilder,
     private signInService: SigninService,
@@ -24,8 +25,13 @@ export class FormLoginComponent implements OnInit{
   }
   login(): any{
     const form = this.loginForm.getRawValue();
-    if (this.signInService.login(form)){
-      this.router.navigate(['dashboard']);
+    if (this.loginForm.valid){
+      if ( this.signInService.login(form) ){
+        this.router.navigate(['dashboard']);
+      }
+      this.messageValid = 'Usuário/Senha incorreto(s)';
+    }else{
+      this.messageValid = 'Usuário e Senha são obrigatórios';
     }
   }
 }
