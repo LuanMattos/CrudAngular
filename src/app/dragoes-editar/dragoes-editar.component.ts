@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DragoesService } from '../services/Dragoes.service';
 import { Dragoes } from '../models/Dragoes';
 
-import {NgForm} from "@angular/forms";
-import { Router, ActivatedRoute} from '@angular/router';
+import {NgForm} from '@angular/forms';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -14,12 +14,11 @@ import { Router, ActivatedRoute} from '@angular/router';
 export class DragoesEditarComponent implements OnInit {
   title = 'Dragões - editar';
   dragao = {} as Dragoes;
-  dragoes:Dragoes[];
-  submitted = false;
+  dragoes: Dragoes[];
   loading = false;
   id;
 
-  constructor(private dragaoService: DragoesService,  private router: Router,) { }
+  constructor(private dragaoService: DragoesService,  private router: Router) { }
 
   ngOnInit(): void {
     const queryString = window.location.search;
@@ -27,10 +26,10 @@ export class DragoesEditarComponent implements OnInit {
     this.id = urlParams.get('id');
     this.editDragao(this.id);
   }
-  cancel(){
-    this.router.navigate(['listar']);
+  cancel(): void{
+    this.router.navigate(['dashboard']);
   }
-  saveDragao(form: NgForm) {
+  saveDragao(form: NgForm): void {
     if (this.dragao.id !== undefined) {
       this.dragaoService.updateDragao(this.dragao).subscribe(() => {
         this.cleanForm(form);
@@ -40,17 +39,17 @@ export class DragoesEditarComponent implements OnInit {
         this.cleanForm(form);
       });
     }
-    this.redirectTo('listar')
+    this.redirectTo('dashboard');
   }
-  editDragao(id) {
+  editDragao(id): void {
     this.dragaoService.getDragaoById(id).subscribe((response) => {
       this.dragao = response;
     });
   }
-  redirectTo(value){
+  redirectTo(value): void{
     this.router.navigate([value]);
   }
-  cleanForm(form: NgForm) {
+  cleanForm(form: NgForm): void {
     form.resetForm();
   }
 

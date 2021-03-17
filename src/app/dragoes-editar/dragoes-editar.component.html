@@ -1,28 +1,31 @@
-<div class="container-form ">
+<div class="container-form " id="edit">
   <div class="general-form animate">
-    <h5 class="card-header">Adicionar/Atualizar dragões</h5>
+    <h5 class="text-muted">Adicionar/Atualizar dragões</h5>
     <div class="card-body">
-      <form id="add-form" (ngSubmit)="f.form.valid && saveDragao(f)" #f="ngForm" novalidate>
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" [(ngModel)]="dragao.name" id="name" name="name" #name="ngModel" required
+      <form (ngSubmit)="f.form.valid && saveDragao(f)" #f="ngForm" novalidate>
+        <div>
+          <span class="text-muted">Nome</span>
+          <input type="text" [(ngModel)]="dragao.name"
+                 id="name" name="name"
+                 #name="ngModel" required
                  class="form-control" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
                  placeholder="Digite o nome">
           <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
             <div *ngIf="name.errors.required">Nome é obrigatório</div>
           </div>
         </div>
-        <div class="form-group">
-          <label for="type">Tipo</label>
-          <input type="text" [(ngModel)]="dragao.type" id="type" name="type" #type="ngModel" required
-                 class="form-control" [ngClass]="{ 'is-invalid': f.submitted && type.invalid }"
-                 placeholder="Digite o tipo">
+        <div>
+          <span class="text-muted">Tipo</span>
+          <input type="text" [(ngModel)]="dragao.type"
+                 id="type" name="type"
+                 #type="ngModel" [ngClass]="{ 'is-invalid': f.submitted && type.invalid }"
+                 placeholder="Digite o tipo" required>
           <div *ngIf="f.submitted && type.invalid" class="invalid-feedback">
-            <div *ngIf="type.errors.required">Tipo é obrigatória</div>
+            <div *ngIf="type.errors.required">Tipo é obrigatório</div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-add-dragon">Salvar</button>
-        <button type="reset" class="btn btn-secondary btn-add-dragon" (click)="cancel()">Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+        <button type="reset" class="btn" (click)="cancel()">Cancelar</button>
       </form>
     </div>
   </div>

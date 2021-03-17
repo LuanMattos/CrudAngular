@@ -1,5 +1,7 @@
-/*Dragon Form*/
-.container-form {
+#edit span {
+  font-size: 12px;
+}
+#edit .container-form {
   display: block;
   position: fixed;
   z-index: 1;
@@ -12,13 +14,30 @@
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
-
-.general-form {
+#edit .general-form {
+  border-radius: 10px;
   padding: 10px;
   background-color: #fefefe;
   margin: 5% auto 15% auto;
   border: 1px solid #d5dde3;
   width: 80%;
+}
+#edit .btn {
+  margin-right: 20px;
+}
+#edit input[type=text] {
+  background: #ebeeff;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 100%;
+  outline: none;
+  color: #212121;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 /*# sourceMappingURL=dragoes-editar.component.css.map */

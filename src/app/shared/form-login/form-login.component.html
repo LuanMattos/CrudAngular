@@ -10,7 +10,7 @@
       <input type="text" placeholder="Usuário (admin)" autocomplete="off"  formControlName="user">
       <input type="password" placeholder="Senha (admin)" autocomplete="off"  formControlName="password">
       <input type="submit" value="Login" class="btn1" [disabled]="loginForm.invalid">
-      <span class="text-danger msg-validate">{{messageValid}}</span>
+      <span class="text-danger invalid-feedback">{{messageValid}}</span>
     </form>
   </div>
 </div>

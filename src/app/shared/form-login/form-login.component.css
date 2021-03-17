@@ -14,10 +14,6 @@
   height: 400px;
   box-shadow: 1px 1px 108.8px 19.2px #191f35;
 }
-#form-login .container .msg-validate {
-  font-size: 10px;
-  font-weight: 100;
-}
 #form-login .container .box h4 span {
   color: #dfdeee;
   font-weight: lighter;
