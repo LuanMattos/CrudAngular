@@ -2,35 +2,28 @@
   <div class="item-close text-white float-rigth" (click)="logout()">
     Sair
   </div>
-  <div class="container">
-    <div class="card list-dragon">
-      <ul>
-        <li>
-          <span class="btn-plus float-rigth" (click)="addDragon()">+</span>
-        </li>
-      </ul>
-      <div class="card-body">
-        <table class="table">
-          <thead>
-          <tr>
-            <th width="40" class="text-center">Nome</th>
-            <th width="20" class="text-center">Tipo</th>
-            <th width="20" class="text-center">Criado em</th>
-            <th width="1" class="text-center td-action">Ações</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr  *ngFor="let dragao of dragoes">
-            <td (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
-            <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
-            <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt | date}}</td>
-            <td align="center">
-              <button type="button" class="btn-default-list" (click)="deleteDragao(dragao)">Deletar</button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <div class="table-wrapper">
+    <h3 class="text-white">Dragões</h3>
+    <!--    <span class="btn-plus float-rigth" (click)="addDragon()">+</span>-->
+    <table class="fl-table">
+      <thead>
+      <tr>
+        <th class="text-center">Nome</th>
+        <th class="text-center">Tipo</th>
+        <th class="text-center">Criado em</th>
+        <th class="text-center td-action">Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let dragao of dragoes">
+        <td (click)="redirectToEdit(dragao)">{{dragao.name}}</td>
+        <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
+        <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt | date}}</td>
+        <td class="h-auto">
+          <button type="button" class="btn-default-list" (click)="deleteDragao(dragao)">Deletar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
