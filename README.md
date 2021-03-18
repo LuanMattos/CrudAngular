@@ -17,6 +17,10 @@ $ npm install
 # Execute o projeto
 $ ng serve
 
+
+
+
+
 <br>
 Depois é só abrir http://localhost:4200
 <br>
