@@ -1,12 +1,28 @@
-# CrudAngular
-Crud Angular
+# :page_facing_up: Dragões - Angular
+Crud Dragões Sicredi
 <br>
 <br>
-Para Iniciar o projeto você deve executar ng serve no diretório do seu terminal preferido
-<br>
-Depois é só abrir http://localhost:4200
-<br>
-<br>
+### Executar a aplicação
+
+```bash
+# Clone este repositório 
+$ git clone git@github.com:LuanMattos/CrudAngular.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd CrudAngular
+
+# Instale as dependências
+$ npm install
+
+# Execute o projeto
+$ ng serve
+
+# O servidor inciará na porta:4200 - acesse http://localhost:4200 
+# Usuário e Senha: admin
+```
+
+
+# :art: Layout
 ![alt text](https://github.com/LuanMattos/CrudAngular/blob/master/scree/1.png "Screenshot 1")
 
 <br>
