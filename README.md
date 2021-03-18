@@ -2,7 +2,21 @@
 Crud Angular
 <br>
 <br>
-Para Iniciar o projeto você deve executar ng serve no diretório do seu terminal preferido
+### Executar a aplicação
+
+```bash
+# Clone este repositório 
+$ git clone git@github.com:LuanMattos/CrudAngular.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd CrudAngular
+
+# Instale as dependências
+$ npm install
+
+# Execute o projeto
+$ ng serve
+
 <br>
 Depois é só abrir http://localhost:4200
 <br>
