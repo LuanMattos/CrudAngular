@@ -25,6 +25,9 @@ const appRoutes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+    data: {
+      title: 'Home'
+    }
   },
   {
     path: 'home',
@@ -38,12 +41,18 @@ const appRoutes: Routes = [
     canActivate: [AuthRequiredGuard],
     component: DragoesDetalheComponent,
     pathMatch: 'full',
+    data: {
+      title: 'Dashboard'
+    }
   },
   {
     path: 'editar',
     canActivate: [AuthRequiredGuard],
     component: DragoesEditarComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: 'Edit'
+    }
   }
 ];
 

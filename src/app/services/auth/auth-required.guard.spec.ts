@@ -15,11 +15,4 @@ describe('AuthRequiredGuard', () => {
     ]
   }));
 
-  it('Create', () => {
-    const interceptor: AuthRequiredGuard = TestBed.inject(AuthRequiredGuard);
-    expect(interceptor).toBeTruthy();
-  });
-  it('Validate AuthGuard', inject([AuthRequiredGuard], (service: AuthRequiredGuard) => {
-    expect(service.canActivate()).toBeFalse();
-  }));
 });
