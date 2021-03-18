@@ -36,7 +36,6 @@ describe('FormLoginComponent', () => {
     fixture = TestBed.createComponent(FormLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-
   });
 
   it('Auth Ok',  () => {
