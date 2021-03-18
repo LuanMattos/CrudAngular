@@ -1,5 +1,5 @@
 # CrudAngular
-Crud Angular
+Crud Dragões Sicredi
 <br>
 <br>
 ### Executar a aplicação
