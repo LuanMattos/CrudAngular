@@ -13,7 +13,7 @@ export class MenuMobileComponent {
     private signInService: SigninService,
     private router: Router
   ) {
-    this.hasRoute()
+    this.hasRoute();
   }
   toogleMenu(): void{
     this.menu = !this.menu;
