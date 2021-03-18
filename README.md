@@ -18,7 +18,7 @@ $ npm install
 $ ng serve
 
 # O servidor inciará na porta:4200 - acesse http://localhost:4200 
-#Usuário e Senha: admin
+# Usuário e Senha: admin
 ```
 
 
