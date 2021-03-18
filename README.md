@@ -16,12 +16,12 @@ $ npm install
 
 # Execute o projeto
 $ ng serve
-```
 
-<br>
-Depois é só abrir http://localhost:4200
-<br>
-<br>
+# O servidor inciará na porta:4200 - acesse http://localhost:4200 
+```
+```bash
+
+
 ![alt text](https://github.com/LuanMattos/CrudAngular/blob/master/scree/1.png "Screenshot 1")
 
 <br>
