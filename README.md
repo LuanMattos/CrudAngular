@@ -19,10 +19,17 @@ $ ng serve
 
 # O servidor inciará na porta:4200 - acesse http://localhost:4200 
 # Usuário e Senha: admin
-```
 
+# Executar Testes lint
+$ ng lint
+
+# Executar Testes Unitários
+$ ng test
+```
+DEMO> https://dragon-c3e43.web.app/
 
 # :art: Layout
+
 ![alt text](https://github.com/LuanMattos/CrudAngular/blob/master/scree/1.png "Screenshot 1")
 
 <br>
