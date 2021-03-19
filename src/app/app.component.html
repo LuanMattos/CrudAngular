@@ -2,8 +2,8 @@
   <app-menu-mobile></app-menu-mobile>
   <app-footer></app-footer>
 </div>
+<div class="loader-container" *ngIf="(spinnerService.showSpinner | async)">
+  <div class="loader"></div>
+</div>
 <router-outlet></router-outlet>
-
-
-
 

@@ -1,15 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { Dragoes } from './models/Dragoes';
 import {User} from './models/user';
-import { Router} from '@angular/router';
-
-
+import {SpinnerService} from './shared/spinner/spinner.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'Dragões';
   dragoes: Dragoes[];
   loading = false;
@@ -18,8 +16,6 @@ export class AppComponent implements OnInit{
   id: string;
 
   constructor(
-    public route: Router
+    public spinnerService: SpinnerService
   ) {}
-
-  ngOnInit(): void {}
 }

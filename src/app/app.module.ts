@@ -19,6 +19,8 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {FormLoginComponent} from './shared/form-login/form-login.component';
 import {SigninService} from './services/signin/signin.service';
 import {AuthRequiredGuard} from './services/auth/auth-required.guard';
+import {SpinnerService} from './shared/spinner/spinner.service';
+import {DragoesResolver} from './resolver/dragoes.resolver';
 
 const appRoutes: Routes = [
   {
@@ -43,7 +45,10 @@ const appRoutes: Routes = [
     pathMatch: 'full',
     data: {
       title: 'Dashboard'
-    }
+    },
+    // resolve: {
+    //   dragoes: DragoesResolver
+    // },
   },
   {
     path: 'editar',
@@ -52,7 +57,7 @@ const appRoutes: Routes = [
     pathMatch: 'full',
     data: {
       title: 'Edit'
-    }
+    },
   }
 ];
 
@@ -78,7 +83,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, SigninService],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, SigninService, SpinnerService],
   bootstrap: [AppComponent]
 })
 

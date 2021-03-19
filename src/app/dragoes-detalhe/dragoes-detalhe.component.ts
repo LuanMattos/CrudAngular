@@ -3,6 +3,7 @@ import {Dragoes} from '../models/dragoes';
 import {DragoesService} from '../services/Dragoes.service';
 import {Router} from '@angular/router';
 import {SigninService} from '../services/signin/signin.service';
+import {SpinnerService} from '../shared/spinner/spinner.service';
 
 
 @Component({
@@ -16,23 +17,25 @@ export class DragoesDetalheComponent implements OnInit {
   constructor(
     private dragaoService: DragoesService,
     public router: Router,
-    private signInService: SigninService
+    private signInService: SigninService,
+    private spinnerService: SpinnerService
     ) {
     this.getDragoes();
   }
 
   ngOnInit(): void {
-  this.getDragoes();
-
+    this.getDragoes();
   }
   getDragoes(): void {
     this.dragaoService.getDragoes().subscribe((dragoes: Dragoes[]) => {
       this.dragoes = dragoes;
+      this.spinnerService.showSpinner.next(false);
     });
   }
   deleteDragao(dragao: Dragoes): void {
     this.dragaoService.deleteDragao(dragao).subscribe(() => {
       this.getDragoes();
+      this.spinnerService.showSpinner.next(false);
     });
   }
   redirectToEdit(dragao: Dragoes): void {

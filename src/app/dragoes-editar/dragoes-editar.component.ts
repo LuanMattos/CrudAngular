@@ -4,6 +4,7 @@ import { Dragoes } from '../models/Dragoes';
 
 import {NgForm} from '@angular/forms';
 import { Router} from '@angular/router';
+import {SpinnerService} from '../shared/spinner/spinner.service';
 
 
 @Component({
@@ -18,7 +19,11 @@ export class DragoesEditarComponent implements OnInit {
   loading = false;
   id;
 
-  constructor(private dragaoService: DragoesService,  private router: Router) { }
+  constructor(
+    private dragaoService: DragoesService,
+    private router: Router,
+    private spinnerService: SpinnerService
+  ) { }
 
   ngOnInit(): void {
     const queryString = window.location.search;
@@ -42,15 +47,23 @@ export class DragoesEditarComponent implements OnInit {
     this.redirectTo('dashboard');
   }
   editDragao(id): void {
-    this.dragaoService.getDragaoById(id).subscribe((response) => {
-      this.dragao = response;
-    });
+    if (id) {
+      this.dragaoService.getDragaoById(id).subscribe((response) => {
+        this.dragao = response;
+        setTimeout(() => {
+          this.spinnerService.showSpinner.next(false);
+        });
+      });
+    }
   }
   redirectTo(value): void{
     this.router.navigate([value]);
   }
   cleanForm(form: NgForm): void {
     form.resetForm();
+    setTimeout(() => {
+      this.spinnerService.showSpinner.next(false);
+    });
   }
 
 }

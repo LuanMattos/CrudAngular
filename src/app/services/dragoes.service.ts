@@ -3,18 +3,23 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import {retry, catchError} from 'rxjs/operators';
 import { Dragoes } from '../models/dragoes';
+import {SpinnerService} from '../shared/spinner/spinner.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DragoesService {
-  url = 'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon';
-  constructor(private httpClient: HttpClient) { }
+  url = 'https://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon';
+  constructor(
+    private httpClient: HttpClient,
+    private spinnerService: SpinnerService
+    ) { }
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   getDragoes(): Observable<Dragoes[]> {
+    this.spinnerService.showSpinner.next(true);
     return this.httpClient.get<Dragoes[]>(this.url)
       .pipe(
         retry(2),
@@ -29,6 +34,7 @@ export class DragoesService {
       );
   }
   saveDragao(dragao: Dragoes): Observable<Dragoes> {
+    this.spinnerService.showSpinner.next(true);
     return this.httpClient.post<Dragoes>(this.url, JSON.stringify(dragao), this.httpOptions)
       .pipe(
         retry(2),
@@ -36,6 +42,7 @@ export class DragoesService {
       );
   }
   updateDragao(dragao: Dragoes): Observable<Dragoes> {
+    this.spinnerService.showSpinner.next(true);
     return this.httpClient.put<Dragoes>(this.url + '/' + dragao.id, JSON.stringify(dragao), this.httpOptions)
       .pipe(
         retry(1),
@@ -43,6 +50,7 @@ export class DragoesService {
       );
   }
   deleteDragao(dragao: Dragoes): Observable<Dragoes> {
+    this.spinnerService.showSpinner.next(true);
     return this.httpClient.delete<Dragoes>(this.url + '/' + dragao.id, this.httpOptions)
       .pipe(
         retry(1),
