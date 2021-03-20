@@ -19,19 +19,28 @@
   background: #565f79;
   color: #b7b7b7;
 }
-#edit-form input[type=text] {
-  background: #ebeeff;
-  border: 0;
+#edit-form input[type = "text"] {
+  display: block;
+  margin:auto;
+  background: #fff;
+  border: 1px solid #c9d3dd;
   border-radius: 5px;
   padding: 14px 10px;
   width: 100%;
   outline: none;
-  color: #212121;
+  color: #333;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+#edit-form input[type = "text"]:focus {
+  border: 1px solid #006ba1;
+}
+@media screen and (min-width: 800px) {
+  .general-form{
+    width: 60% !important;
+  }
+}
 
-/*# sourceMappingURL=dragoes-editar.component.css.map */

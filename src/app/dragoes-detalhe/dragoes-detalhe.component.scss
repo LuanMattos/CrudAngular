@@ -9,6 +9,7 @@
       margin: auto;
       text-align: center;
       padding-top: 15px;
+      color:#4e7b96;
     }
 
     .fl-table {
@@ -47,20 +48,16 @@
 
       thead th {
         color: #4e7b96;
-        background: #e8edf2;
+        background: #c8d3dd;
       }
 
-
-      tr:nth-child(even) {
-        background: #F8F8F8;
-      }
 
       tr:active {
         animation: animatezoom2 0.6s;
       }
 
       tr:hover {
-        background-color: #ebeeff;
+        background-color: #ecf0f5;
       }
 
       @media (max-width: 800px) {

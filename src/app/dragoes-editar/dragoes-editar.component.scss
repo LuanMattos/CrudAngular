@@ -1,6 +1,7 @@
 #edit-form{
   padding-top: 100px;
   span{
+    padding-top:50px;
     font-size: 12px;
   }
 
@@ -20,18 +21,28 @@
     }
   }
   input[type = "text"]{
-    background: #ebeeff;
-    border: 0;
+    display: block;
+    margin:auto;
+    background: #FFF;
+    border: 1px solid #C9D3DD;
     border-radius: 5px;
     padding: 14px 10px;
     width: 100%;
     outline: none;
-    color: #212121;
+    color: #333333;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
+  }
+  input[type = "text"]:focus{
+    border: 1px solid #006ba1;
+  }
+  @media screen and (min-width: 800px) {
+    .general-form{
+      width: 60% !important;
+    }
   }
 }
 
