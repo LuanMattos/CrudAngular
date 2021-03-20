@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background: #282931;
+  background: #f7f8f8;
   -webkit-font-smoothing: antialiased;
   font-family: "Varela Round", sans-serif;
   height: 100%;
@@ -123,10 +123,15 @@ a:hover {
   cursor: pointer !important;
 }
 
-.text-muted {
-  color: #565f79 !important;
+.text-blue {
+  color: #3b5d7d !important;
 }
-
+.text-muted {
+  color: #d0d0d0 !important;
+}
+.text-bold{
+  font-weight: bold !important;
+}
 .text-white {
   color: #bbbbc4 !important;
 }
