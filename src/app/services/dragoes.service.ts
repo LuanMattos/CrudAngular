@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import {retry, catchError} from 'rxjs/operators';
 import { Dragoes } from '../models/dragoes';
 import {SpinnerService} from '../shared/spinner/spinner.service';
-import {environment} from "../../environments/environment";
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
