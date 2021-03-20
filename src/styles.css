@@ -123,6 +123,9 @@ a:hover {
   cursor: pointer !important;
 }
 
+.text-black {
+  color: #333333 !important;
+}
 .text-blue {
   color: #3b5d7d !important;
 }

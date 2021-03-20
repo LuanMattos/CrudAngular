@@ -2,7 +2,7 @@
   @mixin span-menu() {
     span {
       cursor: pointer;
-      color: #bbbbc4;
+      color: #308ae7;
       float: right;
       font-size: 40px;
       margin-right: 10px;
@@ -11,11 +11,22 @@
   .menu-mobile {
     margin: 0;
     padding: 0;
-    color: #bbbbc4;
+    color: #308ae7;
     display: none;
     @include span-menu();
   }
   .items-mobile {
+    div{
+      background-color: #fafcfe;
+      padding: 10px;
+      cursor: pointer;
+      &:hover{
+        background-color: #f7f9fb;
+      }
+    }
+    a{
+      color:#308ae7;
+    }
     padding: 0;
     margin: 0;
     @include span-menu();
@@ -23,7 +34,7 @@
 
     .icon-menu {
       cursor: pointer;
-      color: #bbbbc4;
+      color: #308ae7;
       margin-right: 10px;
     }
   }
@@ -32,7 +43,7 @@
       font-size: 24px;
       z-index: 1000;
       position: fixed;
-      background-color: black;
+      background-color: #fefefe;
       width: 100vw;
       height: 100vh;
       .menu-mobile-header {
