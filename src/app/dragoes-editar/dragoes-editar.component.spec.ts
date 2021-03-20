@@ -33,12 +33,6 @@ describe('DragoesEditarComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  // it('Save Dragon', () => {
-  //   const spySubmit = spyOn(component, 'saveDragao').and.returnValue(null);
-  //   const data = {name: 'test', type: 'test'};
-  //   component.saveDragao(data);
-  //   expect(spySubmit).toHaveBeenCalled();
-  // });
   beforeEach(() => {
     fixture = TestBed.createComponent(DragoesEditarComponent);
     component = fixture.componentInstance;

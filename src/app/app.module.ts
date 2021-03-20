@@ -46,9 +46,6 @@ const appRoutes: Routes = [
     data: {
       title: 'Dashboard'
     },
-    // resolve: {
-    //   dragoes: DragoesResolver
-    // },
   },
   {
     path: 'editar',
