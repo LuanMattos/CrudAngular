@@ -4,12 +4,13 @@ import { Observable, throwError } from 'rxjs';
 import {retry, catchError} from 'rxjs/operators';
 import { Dragoes } from '../models/dragoes';
 import {SpinnerService} from '../shared/spinner/spinner.service';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DragoesService {
-  url = 'https://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon';
+  url = environment.url;
   constructor(
     private httpClient: HttpClient,
     private spinnerService: SpinnerService
