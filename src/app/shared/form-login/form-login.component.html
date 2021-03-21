@@ -9,7 +9,7 @@
       <h5>Para interagir faça login</h5>
       <input type="text" placeholder="Usuário (admin)" autocomplete="off"  formControlName="user">
       <input type="password" placeholder="Senha (admin)" autocomplete="off"  formControlName="password">
-      <input type="submit" value="Login" class="btn1" [disabled]="loginForm.invalid">
+      <app-submit-login [data]="'Login'" [dis]="loginForm.invalid"></app-submit-login>
       <span class="text-danger invalid-feedback">{{messageValid}}</span>
     </form>
   </div>

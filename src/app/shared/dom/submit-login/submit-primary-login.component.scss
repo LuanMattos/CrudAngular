@@ -1,0 +1,25 @@
+#submit-login {
+  border: 0;
+  background: #337ab7;
+  color: #FFF;
+  border-radius: 100px;
+  max-width: 340px;
+  width: 80%;
+  height: 49px;
+  font-size: 16px;
+  position: absolute;
+  top: 79%;
+  left: 8%;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: #385A7B;
+  }
+
+  &:disabled {
+    background: #337ab7;
+    color: #d0d0d0;
+  }
+
+}

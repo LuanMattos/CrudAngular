@@ -78,34 +78,10 @@
       left: 7.5%;
     }
 
-    .btn1 {
-      border:0;
-      background: #337ab7;
-      color: #FFF;
-      border-radius: 100px;
-      max-width: 340px;
-      width: 80%;
-      height: 49px;
-      font-size: 16px;
-      position: absolute;
-      top: 79%;
-      left: 8%;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .btn1:hover {
-      background: #385A7B;
-    }
-    .btn1:disabled{
-      background: #337ab7;
-      color:#d0d0d0;
-    }
-
     .rmb {
       position: absolute;
       margin-left: -24%;
-      margin-top: 0px;
+      margin-top: 0;
       color: #dfdeee;
       font-size: 13px;
     }

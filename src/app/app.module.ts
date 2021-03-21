@@ -23,6 +23,7 @@ import {SpinnerService} from './shared/spinner/spinner.service';
 import {DragoesResolver} from './resolver/dragoes.resolver';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {ButtonPrimaryComponent} from './shared/dom/buttons/button-primary.component';
+import {SubmitPrimaryLoginComponent} from './shared/dom/submit-login/submit-primary-login.component';
 
 const appRoutes: Routes = [
   {
@@ -83,7 +84,8 @@ const appRoutes: Routes = [
     MenuMobileComponent,
     FooterComponent,
     FormLoginComponent,
-    ButtonPrimaryComponent
+    ButtonPrimaryComponent,
+    SubmitPrimaryLoginComponent
   ],
   imports: [
     BrowserModule,
