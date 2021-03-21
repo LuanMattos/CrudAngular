@@ -4,8 +4,6 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {DragoesService} from '../dragoes.service';
 import {SigninService} from '../signin/signin.service';
-import {MenuMobileComponent} from "../../shared/menu-mobile/menu-mobile.component";
-import {Router} from "@angular/router";
 
 
 describe('AuthRequiredGuard', () => {
