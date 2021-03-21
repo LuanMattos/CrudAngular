@@ -21,6 +21,7 @@ import {SigninService} from './services/signin/signin.service';
 import {AuthRequiredGuard} from './services/auth/auth-required.guard';
 import {SpinnerService} from './shared/spinner/spinner.service';
 import {DragoesResolver} from './resolver/dragoes.resolver';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -46,6 +47,9 @@ const appRoutes: Routes = [
     data: {
       title: 'Dashboard'
     },
+    resolve: {
+      dragoes: DragoesResolver
+    }
   },
   {
     path: 'editar',
@@ -55,7 +59,18 @@ const appRoutes: Routes = [
     data: {
       title: 'Edit'
     },
-  }
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
+    data: {
+      title: 'Page not-found'
+    }
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found'
+  },
 ];
 
 @NgModule({
