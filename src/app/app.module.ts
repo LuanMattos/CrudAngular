@@ -22,6 +22,7 @@ import {AuthRequiredGuard} from './services/auth/auth-required.guard';
 import {SpinnerService} from './shared/spinner/spinner.service';
 import {DragoesResolver} from './resolver/dragoes.resolver';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {ButtonPrimaryComponent} from './shared/dom/buttons/button-primary.component';
 
 const appRoutes: Routes = [
   {
@@ -81,7 +82,8 @@ const appRoutes: Routes = [
     LoginComponent,
     MenuMobileComponent,
     FooterComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    ButtonPrimaryComponent
   ],
   imports: [
     BrowserModule,

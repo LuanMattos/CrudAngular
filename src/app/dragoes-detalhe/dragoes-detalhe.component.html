@@ -4,7 +4,7 @@
   </div>
   <div class="table-wrapper">
     <h3 class="title">Dragões</h3>
-    <button type="button" class="btn-default float-rigth mt-40" (click)="addDragon()">Inserir +</button>
+    <app-button-primary (click)="addDragon()" class="float-rigth mt-40" [data]="'Inserir +'"></app-button-primary>
     <table class="fl-table">
       <thead>
       <tr>
@@ -20,7 +20,7 @@
         <td (click)="redirectToEdit(dragao)">{{dragao.type}}</td>
         <td (click)="redirectToEdit(dragao)" class="text-center">{{dragao.createdAt | date}}</td>
         <td class="h-auto">
-          <button type="button" class="btn-default" (click)="deleteDragao(dragao)">Deletar</button>
+          <app-button-primary (click)="deleteDragao(dragao)" [data]="'Deletar'"></app-button-primary>
         </td>
       </tr>
       </tbody>
