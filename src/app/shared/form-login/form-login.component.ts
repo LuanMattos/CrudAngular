@@ -28,8 +28,9 @@ export class FormLoginComponent implements OnInit{
     if (this.loginForm.valid){
       if ( this.signInService.login(form) ){
         this.router.navigate(['dashboard']);
+      }else{
+        this.messageValid = 'Usuário/Senha incorreto(s)';
       }
-      this.messageValid = 'Usuário/Senha incorreto(s)';
     }else{
       this.messageValid = 'Usuário e Senha são obrigatórios';
     }
