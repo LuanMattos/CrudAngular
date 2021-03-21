@@ -7,12 +7,14 @@ import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 import {TokenService} from '../../services/token/token.service';
 import {SigninService} from '../../services/signin/signin.service';
 import {MenuMobileComponent} from './menu-mobile.component';
+import {Router} from '@angular/router';
 
 
 describe('FormLoginComponent', () => {
   let component: MenuMobileComponent;
   let fixture: ComponentFixture<MenuMobileComponent>;
   let service: SigninService;
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -20,7 +22,8 @@ describe('FormLoginComponent', () => {
       imports: [
         HttpClientTestingModule,
         RouterTestingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterTestingModule.withRoutes([])
       ],
       providers: [
         SigninService,
@@ -33,13 +36,14 @@ describe('FormLoginComponent', () => {
   beforeEach(() => {
     service = TestBed.inject( SigninService );
     fixture = TestBed.createComponent(MenuMobileComponent);
+    router = TestBed.inject(Router);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('Auth Ok',  () => {
-    const data = {user: 'admin', password: 'admin'};
-    expect(component.hasRoute()).toBeTruthy();
+  it('Has Route',  () => {
+    router.navigate(['/']);
+    expect(component.hasRoute()).toBeFalse();
   });
 
   beforeEach(() => {

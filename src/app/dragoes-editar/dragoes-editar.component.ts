@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DragoesService } from '../services/Dragoes.service';
+import { DragoesService } from '../services/dragoes.service';
 import { Dragoes } from '../models/Dragoes';
 
 import {NgForm} from '@angular/forms';

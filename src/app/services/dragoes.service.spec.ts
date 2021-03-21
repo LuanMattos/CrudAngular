@@ -2,8 +2,9 @@ import {DragoesService} from './dragoes.service';
 import {TestBed} from '@angular/core/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {Dragoes} from '../models/dragoes';
-import {of} from 'rxjs';
 import {TokenService} from './token/token.service';
+import {of} from 'rxjs';
+import {SpinnerService} from '../shared/spinner/spinner.service';
 
 describe('O serviço DragoesService', () => {
 
@@ -20,22 +21,19 @@ describe('O serviço DragoesService', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
-        TokenService
+        TokenService,
+        SpinnerService
       ]
     });
 
     dragoesService = TestBed.inject(DragoesService);
   });
 
-  it('Instance', () => {
-    expect(dragoesService).toBeTruthy();
-  });
-
-  it('Call getDragoes', () => {
-    const spy = spyOn(dragoesService, 'getDragoes').and.returnValue(null);
-    dragoesService.getDragoes().subscribe(response => {
+  it('Call getDragaoById', () => {
+    const spy = spyOn(dragoesService, 'getDragaoById').and.returnValue(of(fakeDragoes));
+    dragoesService.getDragaoById(1).subscribe(response => {
       expect(spy).toHaveBeenCalled();
-      expect(response);
+      expect(response).toEqual(fakeDragoes);
     });
   });
 

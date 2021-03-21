@@ -40,6 +40,7 @@ describe('FormLoginComponent', () => {
 
   it('Auth Ok',  () => {
     const data = {user: 'admin', password: 'admin'};
+    service.login(data);
     expect(service.login(data)).toBeTrue();
   });
 

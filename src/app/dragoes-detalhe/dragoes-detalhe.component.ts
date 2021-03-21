@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Dragoes} from '../models/dragoes';
-import {DragoesService} from '../services/Dragoes.service';
+import {DragoesService} from '../services/dragoes.service';
 import {Router} from '@angular/router';
 import {SigninService} from '../services/signin/signin.service';
 import {SpinnerService} from '../shared/spinner/spinner.service';

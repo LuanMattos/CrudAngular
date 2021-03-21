@@ -55,9 +55,11 @@ describe('FormSignIn', () => {
     expect(token.hasToken()).toBeFalse();
   });
   it('User no Atuh', () => {
+    token.removeToken();
     expect(token.hasToken()).toBeFalse();
   });
   it('Auth already exists', () => {
+    token.setToken('test');
     expect(token.hasToken()).toBeTrue();
   });
 });
