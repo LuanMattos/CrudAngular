@@ -3,6 +3,7 @@ import {AuthRequiredGuard} from './auth-required.guard';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {DragoesService} from '../dragoes.service';
+import {SigninService} from '../signin/signin.service';
 
 
 describe('AuthRequiredGuard', () => {
@@ -14,12 +15,13 @@ describe('AuthRequiredGuard', () => {
     ],
     providers: [
       DragoesService,
-      AuthRequiredGuard
+      AuthRequiredGuard,
+      SigninService
     ]
   }));
 
-  it('Validação authGuard', inject([AuthRequiredGuard], (service: AuthRequiredGuard) => {
-    expect(service.canActivate()).toBeFalse();
+  it('AuthGuard Validate', inject([AuthRequiredGuard], (service: AuthRequiredGuard) => {
+    expect(service.canActivate()).toBeTrue();
   }));
 
 });
