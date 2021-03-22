@@ -2,8 +2,8 @@ import {inject, TestBed} from '@angular/core/testing';
 import {AuthRequiredGuard} from './auth-required.guard';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {DragoesService} from '../dragoes.service';
-import {SigninService} from '../signin/signin.service';
+import {SigninService} from './signin/signin.service';
+import {DragoesService} from '../services/dragoes.service';
 
 
 describe('AuthRequiredGuard', () => {

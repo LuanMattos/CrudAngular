@@ -6,9 +6,9 @@ import {RouterModule} from '@angular/router';
 import { DragoesDetalheComponent } from './dragoes-detalhe/dragoes-detalhe.component';
 import { DragoesEditarComponent } from './dragoes-editar/dragoes-editar.component';
 import { LoginComponent } from './login/login.component';
-import {AuthRequiredGuard} from './services/auth/auth-required.guard';
 import {DragoesResolver} from './resolver/dragoes.resolver';
 import {NotFoundComponent} from './shared/not-found/not-found.component';
+import {AuthRequiredGuard} from './auth/auth-required.guard';
 
 
 const routes = [

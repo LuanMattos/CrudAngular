@@ -2,9 +2,9 @@ import {DragoesService} from './dragoes.service';
 import {TestBed} from '@angular/core/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {Dragoes} from '../models/dragoes';
-import {TokenService} from './token/token.service';
 import {of} from 'rxjs';
 import {SpinnerService} from '../shared/spinner/spinner.service';
+import {TokenService} from '../token/token.service';
 
 describe('O serviço DragoesService', () => {
 

@@ -1,7 +1,5 @@
 import {Injectable} from '@angular/core';
-import {TokenService} from '../token/token.service';
-
-const API = 'example.com';
+import {TokenService} from '../../token/token.service';
 
 @Injectable()
 export class SigninService{

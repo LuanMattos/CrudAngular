@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {SigninService} from '../../services/signin/signin.service';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {SigninService} from '../../auth/signin/signin.service';
 
 @Component({
   selector: 'app-menu-mobile',

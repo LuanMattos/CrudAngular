@@ -4,10 +4,11 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 
 
-import {TokenService} from '../../services/token/token.service';
-import {SigninService} from '../../services/signin/signin.service';
+
 import {MenuMobileComponent} from './menu-mobile.component';
 import {Router} from '@angular/router';
+import {SigninService} from '../../auth/signin/signin.service';
+import {TokenService} from '../../token/token.service';
 
 
 describe('FormLoginComponent', () => {

@@ -1,14 +1,14 @@
-import {ComponentFixture, inject, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
-import {FormLoginComponent} from '../../shared/form-login/form-login.component';
-import {TokenService} from '../token/token.service';
 import {SigninService} from './signin.service';
+import {LoginComponent} from '../../login/login.component';
+import {TokenService} from '../../token/token.service';
 
 describe('FormSignIn', () => {
-  let component: FormLoginComponent;
-  let fixture: ComponentFixture<FormLoginComponent>;
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
   let service: SigninService;
   let token: TokenService;
 
@@ -16,7 +16,7 @@ describe('FormSignIn', () => {
 
     await TestBed.configureTestingModule({
       declarations: [
-        FormLoginComponent
+        LoginComponent
       ],
       imports: [
         HttpClientTestingModule,
@@ -33,14 +33,14 @@ describe('FormSignIn', () => {
   beforeEach(() => {
     service = TestBed.inject( SigninService );
     token = TestBed.inject( TokenService );
-    fixture = TestBed.createComponent(FormLoginComponent);
+    fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
 
   });
 
   it('Instanced', (() => {
-    expect(FormLoginComponent).toBeTruthy();
+    expect(LoginComponent).toBeTruthy();
   }));
 
   it('Auth Ok',  () => {
