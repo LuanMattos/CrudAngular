@@ -8,9 +8,9 @@
           <input type="text" [(ngModel)]="dragao.name"
                  id="name" name="name"
                  #name="ngModel" required
-                 class="form-control mb-10" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                 class="form-control mb-10" [ngClass]="{ 'is-invalid': validateSubmitAndInvalid(f, name) }"
                  placeholder="Digite o nome">
-          <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+          <div *ngIf="validateSubmitAndInvalid(f, name)" class="invalid-feedback">
             <div *ngIf="name.errors.required">Nome é obrigatório</div>
           </div>
         </div>
@@ -19,9 +19,9 @@
           <input type="text" [(ngModel)]="dragao.type"
                  id="type" name="type"
                  class="mb-10"
-                 #type="ngModel" [ngClass]="{ 'is-invalid': f.submitted && type.invalid }"
+                 #type="ngModel" [ngClass]="{ 'is-invalid': validateSubmitAndInvalid(f, type) }"
                  placeholder="Digite o tipo" required>
-          <div *ngIf="f.submitted && type.invalid" class="invalid-feedback">
+          <div *ngIf="validateSubmitAndInvalid(f, type)" class="invalid-feedback">
             <div *ngIf="type.errors.required">Tipo é obrigatório</div>
           </div>
         </div>

@@ -65,5 +65,7 @@ export class DragoesEditarComponent implements OnInit {
       this.spinnerService.showSpinner.next(false);
     });
   }
-
+  validateSubmitAndInvalid(form, name): void{
+    return (form.submitted && name.invalid);
+  }
 }
